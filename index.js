@@ -1,22 +1,28 @@
-// var: supports hoisting: call a variable before declaration
-// let: doesn't support hoisting: call a variable before it has 
-//      been declared
-// const: you can't declare without initialising
-//      you also can't reassign
+// Primitive data types: prepacked/predefined with the language itself
+// Non-primitive: up to the programmer to define
 
-// var
-console.log({ username });
-var username = "Vukona"
-username = "Vee"
-console.log({ username });
+// Primitive: String, Number, Boolean, undefined, null
 
-// let
-// console.log({ age }); not allowed
-let age = 35
-age = 34
-console.log({ age });
+let username = 'Vukona';
+let age = 35;
+let isFacilitator = true;
+let isInPrison;
+let surname = null
 
-// const
-const surname = "Mnisi"
-// surname = "Khoza" not allowed to reassign
-console.log({ surname });
+console.log({ username, age, isFacilitator, isInPrison, surname});
+
+// Non-primitive: Array, Object, LinkedLists ...
+// Array of students
+let listOfStudents = ['Vukona', 'Kabelo', 'Refilwe', 'Zack', 'Nokwanda']
+console.log({ listOfStudents });
+console.log(listOfStudents.length );
+
+// object of student Vukona
+let student = {
+    name: 'Vukona',
+    surname: 'Mnisi',
+    age: 35,
+    isFacilitator: true
+}
+
+console.log( student );
