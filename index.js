@@ -42,6 +42,47 @@ console.log(newNumber);
 // if statements
 if(5 === 5) {
     console.log(true);
+
 } else {
     console.log(false);
+}
+
+if(firstNumber > secondNumber) {
+    console.log('first number is higher');
+} else {
+    console.log('second number is higher');
+}
+
+// both conditions are met
+if((firstNumber > secondNumber) && (remainder < product)) {
+    console.log('both conditions were met');
+} else {
+    console.log('One or both conditions were not met');
+}
+
+// One condition is met
+if((firstNumber > secondNumber) && (remainder > product)) {
+    console.log('both conditions were met');
+} else {
+    console.log('One or both conditions were not met');
+}
+
+// both conditions are not met
+if((firstNumber < secondNumber) && (remainder > product)) {
+    console.log('both conditions were met');
+} else {
+    console.log('One or both conditions were not met');
+}
+
+// checking if at least one of the conditions is true
+if((firstNumber < secondNumber) || (remainder > product)) {
+    console.log('at least one condition met: OR');
+} else {
+    console.log('Both conditions were not met: OR');
+}
+// Checking if not equals
+if(firstNumber !== 100) {
+    console.log("numbers don't match");
+} else {
+    console.log("numbers do match");
 }
