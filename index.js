@@ -1,28 +1,47 @@
-// Primitive data types: prepacked/predefined with the language itself
-// Non-primitive: up to the programmer to define
+// working mathematical operators
+// +, -, /, *
+// string concatenator
+console.log("hi there" + " my name is Vukona");
 
-// Primitive: String, Number, Boolean, undefined, null
+// number addition
+console.log(3 + 5);
 
-let username = 'Vukona';
-let age = 35;
-let isFacilitator = true;
-let isInPrison;
-let surname = null
+// conversion: explicit conversion by the programmer
+// coercion: implicit conversion by JavaScript
 
-console.log({ username, age, isFacilitator, isInPrison, surname});
+// direct conversion
+console.log(String(3) + String(5));
+console.log(Number("5") + Number("9"));
 
-// Non-primitive: Array, Object, LinkedLists ...
-// Array of students
-let listOfStudents = ['Vukona', 'Kabelo', 'Refilwe', 'Zack', 'Nokwanda']
-console.log({ listOfStudents });
-console.log(listOfStudents.length );
+// implicit conversion
+console.log(5 + 10 + '4');
 
-// object of student Vukona
-let student = {
-    name: 'Vukona',
-    surname: 'Mnisi',
-    age: 35,
-    isFacilitator: true
+// subtract
+let firstNumber = 100;
+let secondNumber = 50
+let remainder = firstNumber - secondNumber
+
+console.log(remainder);
+console.log(secondNumber - firstNumber);
+
+// division
+console.log(firstNumber / secondNumber);
+console.log(secondNumber / firstNumber);
+
+// multiplication
+
+console.log(firstNumber * 8);
+let product = firstNumber * secondNumber
+let newNumber = product / 4
+console.log(product);
+console.log(newNumber);
+
+// Logical operators
+// &&, ||, ==, ===, !==
+
+// if statements
+if(5 === 5) {
+    console.log(true);
+} else {
+    console.log(false);
 }
-
-console.log( student );
