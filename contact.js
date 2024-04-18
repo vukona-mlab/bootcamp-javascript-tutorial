@@ -1,4 +1,4 @@
-function handleFormSubmit(event) {
+async function handleFormSubmit(event) {
     event.preventDefault()
     // console.log(event);
 
@@ -18,7 +18,7 @@ function handleFormSubmit(event) {
         // grab our data from the form
         const formData = new FormData(event.target)
         console.log(formData);
-        fetch('https://formspree.io/f/xkndkobk', 
+        const response = await fetch('https://formspree.io/f/xkndkobk', 
             {
                 method: 'POST',
                 body: formData,
@@ -27,13 +27,11 @@ function handleFormSubmit(event) {
                 }
             }
         )
-        .then( response => response.json())
-        .then( data => {
-            console.log(data);
-            if(data.ok) {
-                alert('Email successfully sent')
-            }
-        })
+        const data = await response.json()
+        console.log(data);
+        if(data.ok) {
+            alert('Email successfully sent')
+        }
 
         console.log('code is running');
         const arr = ['hi', 'there', 'hey']
