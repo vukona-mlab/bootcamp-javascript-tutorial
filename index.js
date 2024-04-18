@@ -4,7 +4,7 @@ console.log({ listOfStudents });
 console.log(listOfStudents.length );
 
 // add item onto array
-listOfStudents.push('Kgaugelo')
+listOfStudents.push('Kgaugelo', 'Kaybee')
 console.log({ listOfStudents });
 
 // remove item from an array
@@ -16,6 +16,7 @@ console.log(listOfStudents);
 
 listOfStudents.forEach(item => {
     console.log('forEach: ', item);
+    
 })
 
 for(let i = 0; i <= listOfStudents.length - 1; i++) {
