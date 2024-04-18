@@ -2,27 +2,31 @@
 let listOfStudents = ['Vukona', 'Kabelo', 'Refilwe', 'Zack', 'Nokwanda']
 // console.log({ listOfStudents });
 
-// mapping
-const studentGreeting = listOfStudents.map(student => {
-    console.log(student);
-    return 'Hey there ' + student
+// filtering
+const specificNameFiltering = listOfStudents.filter(student => {
+    return student === 'Vukona'
 })
 
-console.log(studentGreeting);
+console.log(specificNameFiltering);
 
+const checkingNamesWithA = listOfStudents.filter(student => {
+    console.log(student.toLowerCase());
+    // convert to lowercase
+    const editedName = student.toLowerCase()
+    return editedName.includes('r')
+})
+
+console.log('student: ', checkingNamesWithA);
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-const newNumbers = numbers.map(number => {
-    return number + 10
+const newNumbers = numbers.filter(number => {
+    return !(number % 2)
 })
-const multiplyingEvenNumbers = numbers.map(number => {
-    // console.log({ number, modus: number % 2 });
-    if(number % 2) {
-        return number 
-    } else {
-        return number * number
-    }
-})
-console.log({ numbers, newNumbers, multiplyingEvenNumbers });
 
+// removes the last item
+numbers.pop()
+numbers.pop()
+numbers.pop()
+console.log({ num: numbers });
 
+console.log('new: ', newNumbers);
