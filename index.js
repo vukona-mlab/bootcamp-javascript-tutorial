@@ -86,3 +86,16 @@ if(firstNumber !== 100) {
 } else {
     console.log("numbers do match");
 }
+
+// working with return statements
+// return a value from a function to the calling line
+// return also exits a function execution
+
+function getProductOfTwoNumbers(a, b) {
+    const product = a * b
+    console.log('in func: ', product);
+    return product
+}
+
+const calculation = getProductOfTwoNumbers(4, 8) /  10
+console.log(calculation);
