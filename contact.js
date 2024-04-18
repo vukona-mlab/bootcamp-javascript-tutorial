@@ -9,10 +9,15 @@ async function handleFormSubmit(event) {
     // console.log(emailInput);
     const isEmailValid = emailInput.value.trim() !== '' && emailInput.validity.valid
     console.log(isEmailValid);
-    let isMessageValid = messageInput.value.trim() !== '';
+    let isMessageValid = messageInput.value.trim !== '';
     console.log({ isMessageValid });
-
+    
     const isFormValid = isEmailValid && isMessageValid
+
+    const user = {
+        name: 'Vukona',
+        surname: 'Mnisi'
+    }
 
     if(isFormValid) {
         // grab our data from the form
@@ -20,7 +25,7 @@ async function handleFormSubmit(event) {
         console.log(formData);
         const response = await fetch('https://formspree.io/f/xkndkobk', 
             {
-                method: 'POST',
+                method: 'POST', // GET, POST, PATCH, PUT, DELETE
                 body: formData,
                 headers: {
                     'Accept': 'application/json'
@@ -56,4 +61,22 @@ async function handleFormSubmit(event) {
             messageSpan.classList.remove('hidden')
         }
     }
-}   
+}
+
+function handleOnchange(event) {
+    // console.log(event);
+}
+window.addEventListener(('load'), () => {
+    console.log(document);
+
+    // setTimeout(()=> {
+    //     console.log('hi again');
+        
+    // }, 10000) // milliseconds
+    // setInterval(() => {
+    //     console.log('repeated hi');
+    // }, 5000)
+    console.log('second hi');
+    document.getElementById('email').addEventListener('keyup', handleOnchange)
+    document.getElementById('username').addEventListener('keyup', handleOnchange)
+})
