@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet" />
 
-
+    <script src="./contact.js"></script>
     <title>Portfolio</title>
 </head>
 
@@ -45,7 +45,21 @@
         <h1>Contact Me</h1>
         <p>Fill up the form then hit "Send" and I'll get in touch as soon as I can. Be on the lookout for my reply in
             your emails</p>
-
+            <form onsubmit="handleFormSubmit(event)"
+          >
+            <label>
+              Your email:
+              <input id="email" type="email" name="email">
+              <span class="hidden none email html-element" id="email-span">Email is invalid</span>
+            </label>
+            <label>
+              Your message:
+              <textarea id="message" name="message"></textarea>
+              <span class="hidden" id="message-span">Message is invalid</span>
+            </label>
+            <!-- your other form fields go here -->
+            <button type="submit">Send</button>
+          </form>   
     </div>
 
 </body>

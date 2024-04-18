@@ -38,6 +38,9 @@
     margin-top: 5px;
     color: #e9031d
 }
+.hidden {
+    display: none;
+}
 #content > form > button {
     background-color: #CF0018;
     padding: 10px;
