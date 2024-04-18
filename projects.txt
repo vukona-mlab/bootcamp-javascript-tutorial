@@ -1,0 +1,20 @@
+    const projects = [
+        {
+            picture:"./assets/images.jpg",
+            projectName: 'Afrika Ecommerce',
+            techStacks: ['HTML', 'CSS', 'React', 'JavaScript'],
+            description: 'I need more titles'
+        },
+        {
+            picture:"./assets/images.jpg",
+            projectName: 'BeeHive Farms',
+            techStacks: ['HTML', 'CSS', 'Angular', 'JavaScript'],
+            description: 'hey there'
+        },
+        {
+            picture:"./assets/images.jpg",
+            projectName: 'Ruinscapes Games',
+            techStacks: ['HTML', 'CSS', 'React Native', 'JavaScript', 'Node.js'],
+            description: 'Hi there'
+        }
+    ]
