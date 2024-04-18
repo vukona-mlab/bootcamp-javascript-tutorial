@@ -47,20 +47,14 @@
             your emails</p>
             <form onsubmit="handleFormSubmit(event)"
           >
-            <label>
+            <label id="email-label">
               Your email:
               <input id="email" type="email" name="email">
-              <span class="hidden none email html-element" id="email-span">Email is invalid</span>
             </label>
-            <label>
-                Your email:
-                <input id="username" type="text" name="username">
-                <span class="hidden none email html-element" id="usernames-span">Email is invalid</span>
-              </label>
-            <label>
+
+            <label id="message-label">
               Your message:
               <textarea id="message" name="message"></textarea>
-              <span class="hidden" id="message-span">Message is invalid</span>
             </label>
             <!-- your other form fields go here -->
             <button type="submit">Send</button>

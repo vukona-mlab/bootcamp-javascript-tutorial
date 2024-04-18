@@ -9,7 +9,7 @@ async function handleFormSubmit(event) {
     // console.log(emailInput);
     const isEmailValid = emailInput.value.trim() !== '' && emailInput.validity.valid
     console.log(isEmailValid);
-    let isMessageValid = messageInput.value.trim !== '';
+    let isMessageValid = messageInput.value.trim() !== '';
     console.log({ isMessageValid });
     
     const isFormValid = isEmailValid && isMessageValid
@@ -37,28 +37,26 @@ async function handleFormSubmit(event) {
         if(data.ok) {
             alert('Email successfully sent')
         }
-
-        console.log('code is running');
-        const arr = ['hi', 'there', 'hey']
-        console.log(arr);
-
-        arr.forEach((item) => {
-            console.log(item);
-        })
-        console.log(8 + 9);
     } else {
         // alert the user that the form is invalid
+        console.log('form invalid');
         if(isEmailValid !== true) {
             // display the email span
-            const emailSpan = document.getElementById('email-span')
-            console.log(emailSpan.classList);
-            emailSpan.classList.remove('hidden')
-            console.log(emailSpan.classList);
+            const emailLabel = document.getElementById('email-label')
+            console.log(emailLabel);
+            const emailSpan = document.createElement('span')
+            emailSpan.innerText = 'Email is invalid'
+
+            console.log(emailSpan);
+            emailLabel.appendChild(emailSpan)
         }
         if(isMessageValid !== true) {
             // display the message span
-            const messageSpan = document.getElementById('message-span')
-            messageSpan.classList.remove('hidden')
+            const messageLabel = document.getElementById('message-label')
+            console.log(messageLabel);
+            const messageSpan = document.createElement('span')
+            messageSpan.innerText = 'Message is invalid'
+            messageLabel.appendChild(messageSpan)
         }
     }
 }
@@ -78,5 +76,4 @@ window.addEventListener(('load'), () => {
     // }, 5000)
     console.log('second hi');
     document.getElementById('email').addEventListener('keyup', handleOnchange)
-    document.getElementById('username').addEventListener('keyup', handleOnchange)
 })
