@@ -20,7 +20,7 @@ const countThree = (a, b) => {
     console.log(a + b);
 }
 countThree(3, 6)
-
+console.log('no return on function: ', countThree(9, 0));
 // expecting a return value
 const countNumbers = (a, b) => a + b
 let sumOfNumbers = countNumbers(3, 6)
