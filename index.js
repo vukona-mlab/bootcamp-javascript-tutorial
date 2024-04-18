@@ -1,24 +1,28 @@
 // Array of students
 let listOfStudents = ['Vukona', 'Kabelo', 'Refilwe', 'Zack', 'Nokwanda']
-console.log({ listOfStudents });
-console.log(listOfStudents.length );
+// console.log({ listOfStudents });
 
-// add item onto array
-listOfStudents.push('Kgaugelo', 'Kaybee')
-console.log({ listOfStudents });
-
-// remove item from an array
-listOfStudents.splice(0, 1)
-console.log(listOfStudents);
-
-listOfStudents[0] = "Kaybee"
-console.log(listOfStudents);
-
-listOfStudents.forEach(item => {
-    console.log('forEach: ', item);
-    
+// mapping
+const studentGreeting = listOfStudents.map(student => {
+    console.log(student);
+    return 'Hey there ' + student
 })
 
-for(let i = 0; i <= listOfStudents.length - 1; i++) {
-    console.log('for loop: ', listOfStudents[i])
-}
+console.log(studentGreeting);
+
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+const newNumbers = numbers.map(number => {
+    return number + 10
+})
+const multiplyingEvenNumbers = numbers.map(number => {
+    // console.log({ number, modus: number % 2 });
+    if(number % 2) {
+        return number 
+    } else {
+        return number * number
+    }
+})
+console.log({ numbers, newNumbers, multiplyingEvenNumbers });
+
+
